@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Spares Depot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- This is the section that shows some information about how to reach the shop out -->
+    <div class="topbar">
+        <div class="container">
+            <span>📞 +211 922 901 575 &nbsp;|&nbsp; derich@autospares-depot.ss</span>
+            <span>Open Mon–Sat, 8:00 AM – 6:00 PM · Juba, South Sudan</span>
+        </div>
+    </div>
+
+    <!-- This is the header section of the page, it shows the navigation bar of the all webpage -->
+    <header>
+        <div class="container nav">
+            <a href="#home" class="logo">
+                <div class="mark">⚙</div>
+                <span>AutoSpares <em>Depot</em></span>
+            </a>
+            <input type="checkbox" id="menu-check">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#quote">Request Quote</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="call-btn" href="#">📞 Contact us</a>
+                <label for="menu-check" class="menu-toggle">☰</label>
+            </div>
+        </div>
+    </header>
+
+    <!-- The hero section that introduces what the website is all about -->
+    <div class="hero" id="home">
+        <div class="container">
+            <h1>Genuine spare parts for every <span>drive</span>.</h1>
+            <p>Engine, brakes, filters, suspension and more others. Find the exact part for your vehicle and get it delivered fast.</p>
+            <div class="hero-cta">
+                <a href="#shop" class="btn btn-primary">Shop Parts</a>
+                <a href="#quote" class="btn btn-ghost">Request a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the section that shows how to find the vehicle parts of some specific model-->
+    <div class="finder">
+        <div class="container">
+            <form class="finder-card" action="#shop" method="get">
+                <h2>🔍 Find parts for your vehicle</h2>
+                <p>Select your vehicle to see the parts that fit.</p>
+                <div class="finder-form">
+                    <select name="make">
+                        <option>Select make</option>
+                        <option>Toyota</option>
+                        <option>Nissan</option>
+                        <option>Honda</option>
+                        <option>Suzuki</option>
+                        <option>Hyundai</option>
+                    </select>
+                    <select name="model">
+                        <option>Select model</option>
+                        <optgroup label="Toyota">
+                            <option>Corolla</option>
+                            <option>RAV4</option>
+                            <option>Hilux</option>
+                        </optgroup>
+                        <optgroup label="Nissan">
+                            <option>Note</option>
+                            <option>X-Trail</option>
+                        </optgroup>
+                        <optgroup label="Honda">
+                            <option>Fit</option>
+                            <option>CR-V</option>
+                        </optgroup>
+                        <optgroup label="Suzuki">
+                            <option>Swift</option>
+                            <option>Vitara</option>
+                        </optgroup>
+                        <optgroup label="Hyundai">
+                            <option>Tucson Arizona</option>
+                            <option>Hyundai Tucson</option>
+                        </optgroup>
+                    </select>
+                    <select name="year">
+                        <option value="">Select year</option>
+                        <option>2020+</option>
+                        <option>2015–2019</option>
+                        <option>2010–2014</option>
+                        <option>2005–2009</option>
+                        <option>Before 2005</option>
+                    </select>
+                    <select name="category">
+                        <option value="">All categories</option>
+                        <option>Engine</option>
+                        <option>Brakes</option>
+                        <option>Filters</option>
+                        <option>Suspension</option>
+                        <option>Electrical</option>
+                        <option>Tyres</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Find Parts</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- This is the section for shopping the spares you need for your vehicle, It shows some available stocks in the depot -->
+    <section id="shop">
+        <div class="container">
+            <div class="section-head">
+                <h2>Spare parts catalog</h2>
+                <p>Pick a category to filter the parts.</p>
+            </div>
+
+            <input class="filter-radio" type="radio" name="cat" id="f-all" checked>
+            <input class="filter-radio" type="radio" name="cat" id="f-engine">
+            <input class="filter-radio" type="radio" name="cat" id="f-brakes">
+            <input class="filter-radio" type="radio" name="cat" id="f-filters">
+            <input class="filter-radio" type="radio" name="cat" id="f-suspension">
+            <input class="filter-radio" type="radio" name="cat" id="f-electrical">
+            <input class="filter-radio" type="radio" name="cat" id="f-tyres">
+
+            <div class="pills">
+                <label class="pill" for="f-all">All</label>
+                <label class="pill" for="f-engine">🔧 Engine</label>
+                <label class="pill" for="f-brakes">🛑 Brakes</label>
+                <label class="pill" for="f-filters">🧴 Filters</label>
+                <label class="pill" for="f-suspension">🔩 Suspension</label>
+                <label class="pill" for="f-electrical">🔋 Electrical</label>
+                <label class="pill" for="f-tyres">🛞 Tyres</label>
+            </div>
+
+            <div class="grid">
+
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/crankshaft.jpg" alt="crankshaft">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9902 · BOSCH</div>
+                        <h3>Crank Shaft</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price"> <del>SSP 50,000</del></div>
+                            <div class="price">SSP 20, 000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/connecting-rod.jpg" alt="connecting-rod">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9902 · BOSCH</div>
+                        <h3>Connecting Rod</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price">SSP 25,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/crankcase.jpg" alt="crankcase">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9902 · BOSCH</div>
+                        <h3>Crank Case</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price">SSP 150,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/engine.jpg" alt="engine">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9992 · EOKCH</div>
+                        <h3>Engine</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price">SSP 500,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/valves.jpg" alt="valves">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9902 · BOSCH</div>
+                        <h3>Engine Valves</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price">SSP 10,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="engine">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/cylinder-head.jpg" alt="cylinder-head">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SKU-CRK-9902 · BOSCH</div>
+                        <h3>Crank Shaft</h3>
+                        <div class="fit">Fits: Toyota, Honda, Hyundai</div>
+                        <div class="foot">
+                            <div class="price">SSP 200,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="suspension">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/front-shock.jpg" alt="front-shock">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SA-9011 · KYB</div>
+                        <h3>Front Shock Absorber</h3>
+                        <div class="fit">Fits: Toyota, Nissan, Suzuki</div>
+                        <div class="foot">
+                            <div class="price">SSP 72,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-cat="suspension">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/bushing.jpg" alt="bushing">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SA-9011 · KYZB</div>
+                        <h3>Car Bushing</h3>
+                        <div class="fit">Fits: Toyota, Nissan, Suzuki</div>
+                        <div class="foot">
+                            <div class="price">SSP 12,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="suspension">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/rear-shock.jpg" alt="rear-shock">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">SA-9022 · KYB</div>
+                        <h3>Rear Shock Absorber</h3>
+                        <div class="fit">Fits: Toyota, Honda</div>
+                        <div class="foot">
+                            <div class="price">SSP 65,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="suspension">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/control-arm.jpg" alt="control-arm">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">CB-1203 · TOYOTA</div>
+                        <h3>Control Arm Bush</h3>
+                        <div class="fit">Fits: Toyota</div>
+                        <div class="foot">
+                            <div class="price">SSP 18,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="electrical">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/car-battery.jpg" alt="car-battery">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">BT-6012 · BOSCH</div>
+                        <h3>Car Battery 60Ah</h3>
+                        <div class="fit">Universal fit</div>
+                        <div class="foot">
+                            <div class="price">SSP 110,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="electrical">
+                    <div class="thumb">
+                        <span class="badge low">Low stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/alternator.jpg" alt="alternator">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">AL-3305 · DENSO</div>
+                        <h3>Alternator</h3>
+                        <div class="fit">Fits: Toyota, Nissan</div>
+                        <div class="foot">
+                            <div class="price">SSP 165,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="electrical">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/headlight.jpg" alt="headlight">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">HB-4400 · BOSCH</div>
+                        <h3>Headlight Bulb H4 (pair)</h3>
+                        <div class="fit">Universal fit</div>
+                        <div class="foot">
+                            <div class="price">SSP 15,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-cat="tyres">
+                    <div class="thumb">
+                        <span class="badge in">In stock</span>
+                        <div class="image-card">
+                            <img src="./images-project/tyre.jpg" alt="tyre">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pn">TY-1965 · BOSCH</div>
+                        <h3>Tyre 195/65 R15</h3>
+                        <div class="fit">Fits: Toyota, Nissan, Honda</div>
+                        <div class="foot">
+                            <div class="price">SSP 98,000</div>
+                            <a class="order" href="#" target="_blank" rel="noopener">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+    </section>
+    <!-- The section of car brands that the depot have their spares parts -->
+
+    <section id="brands">
+        <div class="container">
+            <div class="section-head">
+                <h2>Brands we stock</h2>
+                <p>Trusted manufacturers, original and aftermarket.</p>
+            </div>
+            <div class="brands">
+                <div class="brand">BOSCH</div>
+                <div class="brand">DENSO</div>
+                <div class="brand">NGK</div>
+                <div class="brand">BREMBO</div>
+                <div class="brand">MANN</div>
+                <div class="brand">KYB</div>
+                <div class="brand">TOYOTA</div>
+                <div class="brand">SUZUKI</div>
+                <div class="brand">HYUNDAI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The section for why and how to contact us for more about tour car spares-->
+    <section>
+        <div class="container">
+            <div class="why">
+                <div>
+                    <h3>Quality guaranteed</h3>
+                    <p>Genuine and certified aftermarket parts with warranty.</p>
+                </div>
+                <div>
+                    <h3>Fast delivery</h3>
+                    <p>Same-day delivery within Juba, South Sudan or nationwide shipping.</p>
+                </div>
+                <div>
+                    <h3>Fair prices</h3>
+                    <p>Competitive prices and discounts on bulk orders.</p>
+                </div>
+                <div>
+                    <h3>Expert advice</h3>
+                    <p>Not sure which part? Our team will help you choose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The section of making price quotations, spares quotation and contacting us -->
+    <section id="quote">
+        <div class="container two">
+            <div class="panel">
+                <h2>Request a quote</h2>
+                <p>Can't find your part? Tell us what you need and we'll reply with a price.</p>
+                <form action="mailto:derich@autospares-depot.ss" method="post" enctype="text/plain">
+                    <div class="row">
+                        <input type="text" name="name" placeholder="Full name" required>
+                        <input type="tel" name="phone" placeholder="Phone number" required>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="vehicle" placeholder="Vehicle make &amp; model">
+                        <input type="text" name="year" placeholder="Year (e.g. 2012)">
+                    </div>
+                    <div class="full">
+                        <textarea name="message" placeholder="Describe the part(s) you need, or enter the part number" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send request</button>
+                </form>
+            </div>
+            <div class="panel" id="contact">
+                <h2>Visit or contact us</h2>
+                <p>We're happy to help in person, by phone or on WhatsApp.</p>
+                <div class="info-line">
+                    <div>
+                        <b>Shop-room</b>
+                        <span>Juba Town, Juba, South Sudan</span>
+                    </div>
+                </div>
+                <div class="info-line">
+                    <div>
+                        <b>Phone</b>
+                        <span>+211 922 901 575</span>
+                    </div>
+                </div>
+                <div class="info-line">
+                    <div>
+                        <b>Email</b>
+                        <span>derich@autospares-depot.ssd</span>
+                    </div>
+                </div>
+                <div class="info-line">
+                    <div>
+                        <b>Hours</b>
+                        <span>Mon–Sat: 8:00 AM – 6:00 PM · Sun: Closed</span>
+                    </div>
+                </div>
+                <a class="btn whatsapp" href="https://web.whatsapp.com/211922901575" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The footer section of the webpage -->
+    <footer>
+        <div class="container">
+            <div class="foot-grid">
+                <div>
+                    <h4>AutoSpares Depot</h4>
+                    <p style="font-size:14px;max-width:320px">Your trusted source for quality vehicle spare parts in Juba, South Sudan. Genuine parts, fair prices, friendly service.</p>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li>
+                            <a href="#shop">All parts</a>
+                        </li>
+                        <li>
+                            <a href="#brands">Brands</a>
+                        </li>
+                        <li>
+                            <a href="#quote">Request quote</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="tel:+211922901575">Call us</a>
+                        </li>
+                        <li>
+                            <a href="https://web.whatsapp.com/211922901575">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Payments</h4>
+                    <ul>
+                        <li>Bank Account</li>
+                        <li>Cash on delivery
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">&copy; 2026 AutoSpares Depot. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

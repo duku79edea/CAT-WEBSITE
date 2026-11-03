@@ -1,0 +1,545 @@
+/*
+Declaring the general colors and some information using the var() CSS method
+This will allow usability of colors and other information defined using the pseudoclass root
+*/
+:root {
+    --bg: #f5f6f8;
+    --surface: #ffffff;
+    --ink: #1b1f27;
+    --muted: #6a7280;
+    --line: #e2e5ea;
+    --brand: #e4572e;
+    --brand-dark: #c2431f;
+    --dark: #14181f;
+    --ok: #1f9d55;
+    --warn: #d98e04;
+    --radius: 12px;
+    --green: #5cb85c;
+}
+
+/*
+Removing the default setting of the browser by using the universal selector
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* The general body styling */
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+/* Anchor tag styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Buttons styles too */
+button {
+    font: inherit;
+    cursor: pointer;
+    border: 0;
+}
+
+/*Containers styles */
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* Top bar */
+.topbar {
+    background: var(--dark);
+    color: #cfd4dc;
+    font-size: 13px;
+}
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    flex-wrap: wrap;
+}
+
+/* Header styling */
+header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 0;
+}
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--brand);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+.logo span em {
+    color: var(--brand);
+    font-style: normal;
+}
+nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+nav a:hover {
+    color: var(--brand);
+}
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.call-btn {
+    background: var(--dark);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.call-btn:hover {
+    background: var(--brand);
+}
+#menu-check {
+    display: none;
+}
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(115deg, #14181f 0%, #232a36 55%, #3a2a24 100%);
+    color: #fff;
+    padding: 70px 0 90px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after {
+    content: "⚙";
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    font-size: 380px;
+    opacity: 0.05;
+}
+.hero h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.1;
+    max-width: 700px;
+    letter-spacing: -1px;
+}
+.hero h1 span {
+    color: var(--brand);
+}
+.hero p {
+    margin-top: 16px;
+    max-width: 520px;
+    color: #c3c9d4;
+    font-size: 18px;
+}
+.hero-cta {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.2s;
+    text-align: center;
+}
+.btn-primary {
+    background: var(--brand);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: var(--brand-dark);
+}
+.btn-ghost {
+    border: 1px solid #55606f;
+    color: #fff;
+}
+.btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* Vehicle finder */
+.finder {
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+.finder-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(20,24,31,0.14);
+}
+.finder-card h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.finder-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.finder-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 12px;
+}
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font: inherit;
+    background: #fff;
+    outline: none;
+}
+select:focus,
+input:focus,
+textarea:focus {
+    border-color: var(--green);
+    /*background: var(--brand);*/
+}
+
+/* Sections */
+section {
+    padding: 64px 0 0;
+}
+.section-head {
+    margin-bottom: 24px;
+}
+.section-head h2 {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+.section-head p {
+    color: var(--muted);
+}
+
+
+/*CSS-only category filter (radio buttons) */
+.filter-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.pill {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.pill:hover {
+    border-color: var(--green);
+}
+#f-all:checked ~ .pills label[for="f-all"],
+#f-engine:checked ~ .pills label[for="f-engine"],
+#f-brakes:checked ~ .pills label[for="f-brakes"],
+#f-filters:checked ~ .pills label[for="f-filters"],
+#f-suspension:checked ~ .pills label[for="f-suspension"],
+#f-electrical:checked ~ .pills label[for="f-electrical"],
+#f-tyres:checked ~ .pills label[for="f-tyres"] {
+    background: var(--green);
+    color: #fff;
+    border-color: var(--green);
+}
+/* Product grid, the shopping section of the webpage */
+.grid {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 18px;
+}
+.grid img{
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    background:linear-gradient(90deg, red, brown) ;
+}
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 10px 28px rgba(20, 24, 31, 0.1);
+    transform: translateY(-3px);
+}
+.card .thumb {
+    height: 150px;
+    background: linear-gradient(135deg, #eef0f4, #dfe3ea);
+    position: relative;
+    overflow: hidden;
+}
+.image-card {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card img {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+.badge.in {
+    background: var(--ok);
+}
+.badge.low {
+    background: var(--warn);
+}
+.card .body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+.card .pn {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+}
+.card h3 {
+    font-size: 16px;
+    color: var(--dark);
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.card .fit {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.card .foot {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--dark);
+}
+.order {
+    text-decoration: none;
+    background: var(--dark);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+.order:hover {
+    background: var(--green);
+}
+
+
+/* Quotation and contact section */
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+.panel h2 {
+    margin-bottom: 6px;
+}
+.panel > p {
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+form .full {
+    margin-bottom: 12px;
+}
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.info-line {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.info-line b {
+    display: block;
+}
+.info-line span {
+    color: var(--muted);
+    font-size: 14px;
+}
+.whatsapp {
+    background: var(--green);
+    color: #fff;
+    margin-top: 8px;
+}
+
+
+/* Footer of the webpage */
+footer {
+    background: var(--dark);
+    color: #a9b0bd;
+    margin-top: 70px;
+    padding: 44px 0 20px;
+}
+.foot-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 28px;
+}
+footer h4 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+footer li {
+    list-style: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+footer li a:hover {
+    color: var(--brand);
+}
+.copy {
+    border-top: 1px solid #2b323d;
+    margin-top: 30px;
+    padding-top: 16px;
+    font-size: 13px;
+    text-align: center;
+}
+/* Brands of the vehicles section*/
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.brand {
+    flex: 1;
+    min-width: 130px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    text-align: center;
+    font-weight: 800;
+    color: #4a5260;
+    letter-spacing: 0.5px;
+}
+
+/* Why us section styles */
+.why {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+.why div {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+.why h3 {
+    margin: 10px 0 6px;
+    font-size: 17px;
+}
+.why p {
+    color: var(--muted);
+    font-size: 14px;
+}
